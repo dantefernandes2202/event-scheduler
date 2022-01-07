@@ -1,10 +1,10 @@
-package br.com.event.scheduler.adapter.controller.create.model;
+package br.com.event.scheduler.adapter.controller.model;
 
 import br.com.event.scheduler.domain.Event;
 
 import java.time.LocalDateTime;
 
-public class CreateEventResponse {
+public class EventResponse {
 
     private String id;
     private String name;
@@ -43,8 +43,8 @@ public class CreateEventResponse {
         this.date = date;
     }
 
-    public static CreateEventResponse toCreateEventResponse(Event event) {
-        var createEventResponse = new CreateEventResponse();
+    public static EventResponse toEventResponse(Event event) {
+        var createEventResponse = new EventResponse();
         createEventResponse.setId(event.getId());
         createEventResponse.setName(event.getName());
         createEventResponse.setDate(event.getDate());

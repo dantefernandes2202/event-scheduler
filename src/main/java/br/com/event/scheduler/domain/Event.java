@@ -1,7 +1,6 @@
 package br.com.event.scheduler.domain;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public class Event {
 
@@ -34,10 +33,10 @@ public class Event {
         this.date = date;
     }
 
-    public Event(String name, LocalDateTime date) {
-        this.id = UUID.randomUUID().toString();
+    public Event(String id, String name, LocalDateTime date, LocalDateTime createdAt) {
+        this.id = id;
         this.name = name;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = createdAt;
         this.date = date;
     }
 
@@ -46,10 +45,17 @@ public class Event {
     }
 
     public static class EventBuilder {
+        private String id;
         private String name;
         private LocalDateTime date;
+        private LocalDateTime createdAt;
 
         EventBuilder() {
+        }
+
+        public EventBuilder id(final String id) {
+            this.id = id;
+            return this;
         }
 
         public EventBuilder name(final String name) {
@@ -62,8 +68,13 @@ public class Event {
             return this;
         }
 
+        public EventBuilder createdAt(final LocalDateTime createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+
         public Event build() {
-            return new Event(name, date);
+            return new Event(id, name, date, createdAt);
         }
     }
 

@@ -1,8 +1,8 @@
-package br.com.event.scheduler.application.controller;
+package br.com.event.scheduler.application.controller.create;
 
 import br.com.event.scheduler.adapter.controller.create.CreateEventController;
 import br.com.event.scheduler.adapter.controller.create.model.CreateEventRequest;
-import br.com.event.scheduler.adapter.controller.create.model.CreateEventResponse;
+import br.com.event.scheduler.adapter.controller.model.EventResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class CreateEventSpringController {
     }
 
     @PostMapping("/events")
-    public ResponseEntity<CreateEventResponse> create(@RequestBody CreateEventRequest request) {
+    public ResponseEntity<EventResponse> create(@RequestBody CreateEventRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(createEventController.create(request));
     }
 

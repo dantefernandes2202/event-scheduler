@@ -1,7 +1,7 @@
 package br.com.event.scheduler.adapter.controller.create;
 
 import br.com.event.scheduler.adapter.controller.create.model.CreateEventRequest;
-import br.com.event.scheduler.adapter.controller.create.model.CreateEventResponse;
+import br.com.event.scheduler.adapter.controller.model.EventResponse;
 import br.com.event.scheduler.usecase.create.CreateEvent;
 
 public class CreateEventController {
@@ -12,9 +12,9 @@ public class CreateEventController {
         this.createEvent = createEvent;
     }
 
-    public CreateEventResponse create(CreateEventRequest request) {
+    public EventResponse create(CreateEventRequest request) {
         var event = request.toEvent(request);
-        return CreateEventResponse.toCreateEventResponse(createEvent.create(event));
+        return EventResponse.toEventResponse(createEvent.create(event));
     }
 
 }

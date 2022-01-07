@@ -6,4 +6,6 @@ public interface EventRepository {
 
     public Event save(Event event);
 
+    public Event findById(String id);
+
 }
