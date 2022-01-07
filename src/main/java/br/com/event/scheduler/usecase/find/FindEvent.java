@@ -1,16 +1,16 @@
-package br.com.event.scheduler.usecase.findby;
+package br.com.event.scheduler.usecase.find;
 
 import br.com.event.scheduler.domain.Event;
-import br.com.event.scheduler.usecase.findby.exception.FindEventException;
+import br.com.event.scheduler.usecase.find.exception.FindEventException;
 import br.com.event.scheduler.usecase.port.EventRepository;
 
 import java.util.Objects;
 
-public class FindEventById {
+public class FindEvent {
 
     private EventRepository repository;
 
-    public FindEventById(EventRepository repository) {
+    public FindEvent(EventRepository repository) {
         this.repository = repository;
     }
 

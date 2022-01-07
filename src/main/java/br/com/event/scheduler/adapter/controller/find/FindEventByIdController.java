@@ -1,13 +1,13 @@
-package br.com.event.scheduler.adapter.controller.findby;
+package br.com.event.scheduler.adapter.controller.find;
 
 import br.com.event.scheduler.adapter.controller.model.EventResponse;
-import br.com.event.scheduler.usecase.findby.FindEventById;
+import br.com.event.scheduler.usecase.find.FindEvent;
 
 public class FindEventByIdController {
 
-    private FindEventById findEventById;
+    private FindEvent findEventById;
 
-    public FindEventByIdController(FindEventById findEventById) {
+    public FindEventByIdController(FindEvent findEventById) {
         this.findEventById = findEventById;
     }
 

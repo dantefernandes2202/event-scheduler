@@ -1,6 +1,6 @@
-package br.com.event.scheduler.application.controller.findby;
+package br.com.event.scheduler.application.controller.find;
 
-import br.com.event.scheduler.adapter.controller.findby.FindEventByIdController;
+import br.com.event.scheduler.adapter.controller.find.FindEventByIdController;
 import br.com.event.scheduler.adapter.controller.model.EventResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
