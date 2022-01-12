@@ -1,0 +1,3 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'br.com.event.scheduler.domain'

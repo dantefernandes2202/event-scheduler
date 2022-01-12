@@ -1,2 +1,0 @@
-# event-scheduler
-Event scheduler

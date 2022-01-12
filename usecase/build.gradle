@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'br.com.event.scheduler.usecase'
+
+dependencies {
+    implementation(
+            project(':domain')
+    )
+}

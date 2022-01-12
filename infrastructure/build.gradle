@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'br.com.event.schedulet.infrastructure'
+
+dependencies {
+    implementation(
+            project(':usecase'),
+            project(':domain'),
+    )
+}

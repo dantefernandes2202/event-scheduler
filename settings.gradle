@@ -1,0 +1,6 @@
+rootProject.name = 'event-scheduler'
+include 'domain'
+include 'usecase'
+include 'spring-app'
+include 'infrastructure'
+
